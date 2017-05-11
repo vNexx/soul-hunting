@@ -1,4 +1,4 @@
-const isFill = (field => {
+const isFill = ((field: string) => {
   if (field !== undefined) {
     return field.trim().length === 0;
   }

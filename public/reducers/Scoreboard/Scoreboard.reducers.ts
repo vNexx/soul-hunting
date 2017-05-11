@@ -7,7 +7,7 @@ export function page(state = 1, action = {}) {
   }
 }
 
-export function users (state = [], action) {
+export function users (state: any = [], action: any) {
   switch (action.type) {
     case 'ADD_USER':
       return [

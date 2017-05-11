@@ -54,7 +54,7 @@ class Scoreboard extends React.Component<void, void> {
     );
   }
 
-  _costyl(users) {
+  _costyl(users: any) {
     const userArray = this._makeUsersArray(users);
 
     userArray.sort((lhs, rhs) => {
@@ -64,7 +64,7 @@ class Scoreboard extends React.Component<void, void> {
     return userArray;
   }
 
-  _makeUsersArray(users) {
+  _makeUsersArray(users: any) {
     let array = [];
 
     for (let user of users) {
@@ -75,7 +75,7 @@ class Scoreboard extends React.Component<void, void> {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state: any) => {
   return {
     isAuthenticated: state.authentication.isAuthenticated,
     page: state.page,
@@ -83,16 +83,16 @@ const mapStateToProps = state => {
   }
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch: any) => {
   return {
     getUsers: (page = 1) => {
       dispatch(togglePreloader());
 
       return getUsers(page)
-        .then(response => {
+        .then((response: any) => {
           return response.json();
         })
-        .then(data => {
+        .then((data: any) => {
           dispatch(addPage());
           dispatch(addUser(data));
           dispatch(togglePreloader());

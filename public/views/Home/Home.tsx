@@ -68,7 +68,7 @@ class Home extends React.Component<void, void> {
     );
   }
 
-  setKeysButtons(max) {
+  setKeysButtons(max: number) {
     document.addEventListener('keydown', event => {
       let current = +this.props.current;
 
@@ -96,7 +96,7 @@ class Home extends React.Component<void, void> {
     });
   }
 
-  setActiveButton(number) {
+  setActiveButton(number: number) {
     switch (+number) {
       case 1:
         this.props.setActive(true, false, false, number);
@@ -112,7 +112,7 @@ class Home extends React.Component<void, void> {
     }
   }
 
-  _setButtons(auth) {
+  _setButtons(auth: any) {
     return auth ? [
       {
         number: 1,
@@ -149,7 +149,7 @@ class Home extends React.Component<void, void> {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state: any) => {
   return {
     isAuthenticated: state.authentication.isAuthenticated,
     current: state.buttons[0].current,
@@ -160,9 +160,9 @@ const mapStateToProps = state => {
   }
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch: any) => {
   return {
-    setActive: (button1, button2, button3, current) => {
+    setActive: (button1: any, button2: any, button3: any, current: any) => {
       dispatch(setActive(button1, button2, button3, current));
     },
 
@@ -170,7 +170,7 @@ const mapDispatchToProps = dispatch => {
       dispatch(togglePreloader());
 
       checkAuthentication()
-        .then(response => {
+        .then((response: any) => {
           return +response.status === 200 ? {
             data: response.json(),
             isLogin: true
@@ -178,10 +178,10 @@ const mapDispatchToProps = dispatch => {
             isLogin: false
           };
         })
-        .then(data => {
+        .then((data: any) => {
           if (data.isLogin) {
             data.data
-              .then(user => {
+              .then((user: any) => {
                 localStorage.setItem('token', user.login);
                 dispatch(setCurrentUser(user.login));
                 dispatch(togglePreloader());

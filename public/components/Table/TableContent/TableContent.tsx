@@ -5,7 +5,7 @@ import {TableBody} from '../TableBody/TableBody';
 
 export class TableContent extends React.Component<void, void> {
   render() {
-    const content = this.props.content.map((item, index) => {
+    const content = this.props.content.map((item: number, index: number) => {
       return (
         <TableRow key={ index }>
           <TableElement item={ index + 1 }/>

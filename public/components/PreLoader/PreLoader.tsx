@@ -23,7 +23,7 @@ class PreLoader extends React.Component<void, void> {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state: any) => {
   return {
     show: state.preloader
   }

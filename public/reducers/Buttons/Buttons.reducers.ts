@@ -15,7 +15,7 @@ const initialState = [
   }
 ];
 
-function buttons(state = initialState, action) {
+function buttons(state = initialState, action: any) {
   if (action.type === NEXT_BUTTON) {
     return action.payload;
   }

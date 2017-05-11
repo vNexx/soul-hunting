@@ -29,7 +29,7 @@ class UserBlock extends React.Component<void, void> {
     );
   }
 
-  _checkName(name) {
+  _checkName(name: string) {
     if (name.length > 8) {
       name = name.slice(0, 8) + '...';
     }
@@ -37,19 +37,19 @@ class UserBlock extends React.Component<void, void> {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state: any) => {
   return {
     user: state.authentication.user
   }
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch: any) => {
   return {
     logout: () => {
       dispatch(togglePreloader());
 
       return logoutUser()
-        .then(response => {
+        .then((response: any) => {
           if (+response.status === 200) {
             localStorage.removeItem('token');
             dispatch(setCurrentUser(null));
@@ -60,7 +60,7 @@ const mapDispatchToProps = dispatch => {
         });
     },
 
-    setCurrentUser: user => {
+    setCurrentUser: (user: any) => {
       dispatch(setCurrentUser(user))
     }
   }

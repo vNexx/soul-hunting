@@ -62,7 +62,7 @@ class SignIn extends React.Component<void, void> {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state: any) => {
   return {
     isAuthenticated: state.authentication.isAuthenticated
   }

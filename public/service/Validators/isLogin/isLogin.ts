@@ -1,6 +1,6 @@
 const loginRegular = /^[a-zA-Z](.[a-zA-Z0-9_-]*)$/;
 
-const isLogin = (login => {
+const isLogin = ((login: string) => {
   return loginRegular.test(login);
 });
 
