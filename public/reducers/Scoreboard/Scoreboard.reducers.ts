@@ -1,4 +1,4 @@
-export function page(state = 1, action = {}) {
+export function page(state = 1, action: any = {}) {
   switch(action.type) {
     case 'ADD_PAGE':
       return ++state;

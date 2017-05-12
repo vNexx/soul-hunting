@@ -23,7 +23,7 @@ interface Props {
   control: string;
   submit: any;
   type?: string;
-  send: () => any;
+  send: (url: string, data: any) => any;
   handleSubmit?: any;
   name?: string;
   _errors: any;
@@ -88,7 +88,7 @@ class Form extends React.Component<Props, void> {
             className='form'
             name='form'
             ref={ (form: any) => {
-              this.form = form
+              this._form = form
             }}
             onSubmit={handleSubmit}
           >
@@ -144,7 +144,7 @@ class Form extends React.Component<Props, void> {
   }
 
   _getFields() {
-    return this.form.querySelectorAll('input');
+    return this._form.querySelectorAll('input');
   }
 
   _signInPack(data: any) {

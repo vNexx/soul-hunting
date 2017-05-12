@@ -5,7 +5,7 @@ const initialState = {
   user: {}
 };
 
-export function authentication(state = initialState, action = {}) {
+export function authentication(state = initialState, action: any = {}) {
   switch(action.type) {
     case 'SET_CURRENT_USER':
       return {

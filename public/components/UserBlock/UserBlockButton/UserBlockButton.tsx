@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Button} from '../../Button/Button';
 
-export class UserBlockButton extends React.Component<void, void> {
+export class UserBlockButton extends React.Component<any, void> {
   render() {
     return (
       <div className='userblock__button'>

@@ -3,7 +3,7 @@ export default class Device {
   _userAgent: string;
 
   constructor() {
-    this._devices = window.device;
+    this._devices = (window as any).device;
     this._userAgent = window.navigator.userAgent.toLowerCase();
   }
 

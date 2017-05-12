@@ -11,13 +11,13 @@ import {togglePreloader} from '../../actions/PreLoader/PreLoader.actions';
 import './UserBlock.scss';
 import {UserBlockIcon} from './UserBlockIcon/UserBlockIcon';
 
-class UserBlock extends React.Component<void, void> {
+class UserBlock extends React.Component<any, void> {
   logout() {
     this.props.logout();
   }
 
   render() {
-    const {user} = this.props;
+    let {user} = this.props;
 
     user = this._checkName(user);
     return (

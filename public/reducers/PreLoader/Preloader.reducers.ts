@@ -1,4 +1,4 @@
-export default function preloader(state = false, action = {}) {
+export default function preloader(state = false, action: any = {}) {
   switch(action.type) {
     case 'TOGGLE__PRELOADER':
       return !state;
@@ -7,4 +7,4 @@ export default function preloader(state = false, action = {}) {
   }
 }
 
-export default preloader;
+//export default preloader;

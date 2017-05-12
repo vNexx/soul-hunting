@@ -19,7 +19,8 @@ const header = [{
   title: 'Score'
 }];
 
-class Scoreboard extends React.Component<void, void> {
+class Scoreboard extends React.Component<any, void> {
+  private _users: Array<any>;
   componentWillMount() {
     this.props.getUsers(this.props.page);
   }
