@@ -7,7 +7,7 @@ import {Information} from '../../components/Information/Information';
 import {Mobile} from '../Mobile/Mobile';
 import {Button} from '../../components/Button/Button';
 
-class Game extends React.Component<void, void> {
+class Game extends React.Component<any, void> {
   render() {
     const { device } = this.props;
 
@@ -35,4 +35,4 @@ export default connect(
   state => ({
     device: state.device
   })
-)(Game);
+)(Game as any);

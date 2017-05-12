@@ -8,7 +8,7 @@ interface Props {
   click?: () => void;
 }
 
-class FormButton extends React.Component<Props, void> {
+class FormButton extends React.Component<any, void> {
   constructor(props: Props) {
     super(props);
   }

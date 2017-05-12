@@ -7,7 +7,7 @@ import {Information} from '../../components/Information/Information';
 
 import './About.scss'
 
-class About extends React.Component<void, void> {
+class About extends React.Component<any, void> {
   render() {
     const {isAuthenticated} = this.props;
 

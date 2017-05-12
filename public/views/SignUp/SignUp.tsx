@@ -32,7 +32,7 @@ const signUpFields = [{
   placeholder: '••••••••'
 }];
 
-export class SignUp extends React.Component<void, void> {
+export class SignUp extends React.Component<any, void> {
   constructor() {
     super();
 

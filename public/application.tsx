@@ -34,14 +34,14 @@ store.dispatch(setDevice(new Device().isDesktop()));
 export const App = () => (
   <Provider store={ store }>
     <Router history={ browserHistory }>
-      <Route path={ RoutesMap.HOME } component={ MainTemplate }>
+      <Route path= { RoutesMap.HOME } component={ MainTemplate }>
         <IndexRoute component={ Home }/>
         <Route path={ RoutesMap.SIGNIN } component={ SignIn }/>
         <Route path={ RoutesMap.SIGNUP } component={ SignUp }/>
-        <Route path={ RoutesMap.SCOREBOARD } component={ Scoreboard }/>
+        <Route path={ RoutesMap.SCOREBOARD } component={ Scoreboard as any}/>
         <Route path={ RoutesMap.ABOUT } component={ About }/>
         <Route path={ RoutesMap.GAME } component={ Game }/>
-        <Route path="*" component={ Error }/>
+        <Route component={ Error as any }/>
       </Route>
     </Router>
   </Provider>

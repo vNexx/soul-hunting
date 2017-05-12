@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import './PreLoader.scss';
 
-class PreLoader extends React.Component<void, void> {
+class PreLoader extends React.Component<any, void> {
   render() {
     const { show } = this.props;
 

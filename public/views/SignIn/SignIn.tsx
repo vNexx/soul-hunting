@@ -22,7 +22,7 @@ const signInFields = [{
   error: ''
 }];
 
-class SignIn extends React.Component<void, void> {
+class SignIn extends React.Component<any, void> {
   constructor() {
     super();
 

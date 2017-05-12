@@ -59,7 +59,7 @@ class Transport {
       mode: 'cors',
       body: data,
       credentials: coockies
-    });
+    } as any);
   }
 
   private _senderGet(uri: string, _method: string,
@@ -70,7 +70,7 @@ class Transport {
       headers: _headers,
       mode: 'cors',
       credentials: coockies
-    });
+    } as any);
   }
 }
 

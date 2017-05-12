@@ -8,7 +8,7 @@ import UserBlock from '../../components/UserBlock/UserBlock';
 
 import './MainTemplate.scss';
 
-class MainTemplate extends React.Component<void, void> {
+class MainTemplate extends React.Component<any, void> {
   render() {
     const { isAuthenticated, device } = this.props;
 

@@ -89,7 +89,7 @@ const mapDispatchToProps = (dispatch: any) => {
     getUsers: (page = 1) => {
       dispatch(togglePreloader());
 
-      return getUsers(page)
+      return getUsers(page as any)
         .then((response: any) => {
           return response.json();
         })
